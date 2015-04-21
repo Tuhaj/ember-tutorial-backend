@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   respond_to :json
 
   def index
+    headers['Access-Control-Allow-Origin'] = '*'
     render json: Post.all
   end
 
